@@ -1,0 +1,27 @@
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = MyTestApp
+#  MODULE_UNI_FILE                = HelloWorld.uni
+  FILE_GUID                      = 0150B6AF-CCA3-4516-B5C1-A34C4392A550
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = UefiMain
+  
+  [Sources]
+  MyTestApp.c
+#  HelloWorldStr.uni
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+#  UefiDriverEntryPoint
+  UefiLib
+  PcdLib
+  DebugLib
+  
+ [Protocols]
+ gEfiSimpleTextOutProtocolGuid
+ gEfiSimpleTextInProtocolGuid
